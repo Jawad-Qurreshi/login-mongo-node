@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Eagle Eye</string>
+    <string name="title_activity_main">Eagle Eye</string>
+    <string name="package_name">Eagle.java.app</string>
+    <string name="custom_url_scheme">Eagle.java.app</string>
+</resources>

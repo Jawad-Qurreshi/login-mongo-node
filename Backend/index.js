@@ -8,7 +8,7 @@ const jsonwebtoken = require('jsonwebtoken');
 const app = express();
 
 
-mongoose.connect('mongodb://localhost:27017/mydbforproject', {useNewUrlParser: true,useUnifiedTopology:true});
+mongoose.connect('mongodb+srv://dbjawad:dbjawadpassword@cluster0-55fcd.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology:true});
 
 app.use(bodyParser.json());
 
@@ -26,6 +26,14 @@ const Users = mongoose.model('Users', {
     age: Number,
     gender: String,
     institute: String,
+   });
+
+   const Customers = mongoose.model('Customers', {
+    name: String,
+    ShopName: String,
+    Address: String,
+    Service: Number,
+    Category: String,
    });
   
   
@@ -97,6 +105,49 @@ app.post('/signup', async (req, res) => {
   }
 
   });
+
+  app.post('/signupCustomer', async (req, res) => {
+
+    try{
+      const body = req.body;
+  
+      // there must be a password in body
+  
+      // we follow these 2 steps
+  
+      // const name = body.password;
+  
+      // // var salt = bcrypt.genSaltSync(10);
+      // // var hash = bcrypt.hashSync(password, salt);
+      // //body.password = hash;
+  
+      // console.log('hash - > ', hash);
+      
+      const customer = new Customers(body);
+  
+  
+       const result = await customer.save();
+  
+      res.send({
+        message: 'Student signup successful'
+      });
+  
+    }
+  
+    catch(ex){
+      console.log('ex',ex)
+  
+      res.send({
+        message: 'Error in signup',
+        detail: ex
+      }).status(500);
+    }
+  
+    });
+
+
+
+
     //   app.post('/login',  async (req, res) => {
     //     const body = req.body;
     //     console.log('req.body', body);

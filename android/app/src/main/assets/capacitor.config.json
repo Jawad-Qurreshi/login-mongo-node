@@ -1,0 +1,8 @@
+{
+  "appId": "Eagle.java.app",
+  "appName": "Eagle Eye",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

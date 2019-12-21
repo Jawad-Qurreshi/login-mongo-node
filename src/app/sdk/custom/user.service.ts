@@ -23,4 +23,12 @@ export class UserService {
 
     return this.http.post(url, credentials);
   }
+
+  public signupcustomer(credentials: object): Observable<any> {
+
+    // this url will be http://localhost:3000/users/signupcustomer
+    const url = BookyConfig.getPath() + '/signupCustomer';
+
+    return this.http.post(url, credentials);
+  }
 }

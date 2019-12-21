@@ -1,17 +1,19 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-icon><img  class="header_logo" width="10" height="10" src="../../assets/icon/download 1.svg"></ion-icon> 
     </ion-buttons>
     <ion-title>
-      Welcome to my signUP/SignIN page
+      Eagle EYE
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content>
   <ion-card class="welcome-card">
-    <img src="/assets/tight-bachi.svg" alt=""/>
+    <img src="../../assets/tight-bachi.png" alt=""/>
     <ion-card-header>
       <ion-card-subtitle>Let Get started niggas</ion-card-subtitle>
       <ion-card-title>Welcome to Tight Bachi world</ion-card-title>
@@ -29,7 +31,7 @@
     </ion-list-header>
     <ion-item href="https://www.youtube.com/watch?v=LdH7aFjDzjI">
       <ion-icon slot="start" color="medium" ></ion-icon>
-      <ion-label>I am A Mess</ion-label>
+      <ion-label>im a mess</ion-label>
     </ion-item>
     
     <ion-item href="https://www.youtube.com/watch?v=weeI1G46q0o">
@@ -38,11 +40,15 @@
     </ion-item>
 
     <div class="ion-padding">
-      <ion-button size="small"  (click)="login()" color="primary" type="login" >Go to login page     </ion-button>
+      <ion-button size="small"  (click)="login()" color="primary" type="login" >Go to login page</ion-button>
     </div>
 
     <div class="ion-padding">
-      <ion-button size="small"  (click)="SignUp()" color="primary" type="signUp" >Go to Sign Up page     </ion-button>
+      <ion-button size="small"  (click)="SignUp()" color="primary" type="signUp" >Go to Sign Up page</ion-button>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button size="small"  (click)="CustomerSignUp()" color="primary" type="signUp" >Go to Customer Sign Up page</ion-button>
     </div>
     
   </ion-list>

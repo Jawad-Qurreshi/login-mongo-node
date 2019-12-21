@@ -48,4 +48,8 @@ export class HomePage {
     //   );
     this.router.navigateByUrl('/register');
      }
+
+     CustomerSignUp(){
+      this.router.navigateByUrl('/customer');
+     }
 }
