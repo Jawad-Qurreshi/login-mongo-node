@@ -243,7 +243,7 @@ app.post('/signup', async (req, res) => {
 //     res.send('Page doesnot exists');
 //   });
   
-  app.listen(3002, () => {
+  app.listen(process.env.PORT || 3002, () => {
     console.log('Express application running on localhost:3002');
   });
   
