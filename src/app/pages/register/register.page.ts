@@ -66,6 +66,7 @@ export class RegisterPage implements OnInit {
       data => {
         console.log('got response from server', data);
         this.loading = false;
+        
         this.router.navigateByUrl('/home');
       },
       error => {

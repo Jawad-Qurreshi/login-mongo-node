@@ -4,11 +4,11 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 const jsonwebtoken = require('jsonwebtoken');
 
-
+const port = process.env.PORT || 3002;
 const app = express();
 
-
-mongoose.connect('mongodb+srv://dbjawad:dbjawadpassword@cluster0-55fcd.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology:true});
+const mongocon = process.env.mongoCon;
+mongoose.connect('mongodb+srv://jawadeagleyeDB:mydbpassword@cluster1-nb35w.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology:true});
 
 app.use(bodyParser.json());
 
@@ -243,8 +243,8 @@ app.post('/signup', async (req, res) => {
 //     res.send('Page doesnot exists');
 //   });
   
-  app.listen(process.env.PORT || 3002, () => {
-    console.log('Express application running on localhost:3002');
+  app.listen(port, () => {
+    console.log('Express application running on localhost:',port);
   });
   
 
